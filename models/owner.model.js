@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const userSchema = mongoose.Schema({
+const ownerSchema = mongoose.Schema({
   // // TODO These are the things we need to Create for a backend model
 
   // - Full Name = String
@@ -26,24 +26,16 @@ const userSchema = mongoose.Schema({
     require: true,
     type: String,
   },
-  cart: {
+  products: {
     type: Array,
     default: []
   },
-  isAdmin: {
-    type: Boolean
-  },
-  orders: {
-    type: Array,
-    default: []
-  },
-  contact: {
-    type: Number,
-  },
-  image: {
-    require: true,
+  picture: {
     type: String,
+  },
+  gstn: {
+    type: String
   }
 })
 
-module.exports = mongoose.model("user", userSchema);
+module.exports = mongoose.model("owner", ownerSchema);

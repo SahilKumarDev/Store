@@ -6,11 +6,9 @@ const ownerSchema = mongoose.Schema({
   // - Full Name = String
   // - Email = String
   // - Password = String
-  // - Cart = Array
-  // - isAdmin = Boolean
-  // - orders = Array
-  // - Contact = Number
-  // - Image = String/db
+  // - products = Array
+  // - gstn = Number
+  // - picture = String/db
 
 
   // // TODO :- Created from here

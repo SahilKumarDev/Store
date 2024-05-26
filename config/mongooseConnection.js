@@ -1,9 +1,16 @@
 const mongoose = require('mongoose')
+const config = require("config")
 
-mongoose.connect("mongodb://127.0.0.1:27017/store").then(function() {
-  console.log("connected successfully");
+const dbgr = require("debug")("development:mongoose");
+// export DEBUG=development:* // This command is to use debugger
+
+
+mongoose.connect(`${config.get("MONGO_URI")}/store`).then(function () {
+  dbgr("Connected")
+  // console.log("connected successfully");
 }).catch((err) => {
-  console.log("Error while connected", err);
+  dbgr("Error", err)
+  // console.log("Error while connected", err);
 })
 
 module.exports = mongoose.connection;

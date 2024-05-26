@@ -20,3 +20,13 @@
 - BgColor = String
 - PanelColor = String
 - TextColor = String
+
+## 
+
+### OwnerModel
+- Full Name = String
+- Email = String
+- Password = String
+- products = Array
+- gstn = Number
+- picture = String/db
